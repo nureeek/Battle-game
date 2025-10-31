@@ -1,0 +1,2 @@
+Mage received 1 damage. Health is now 59
+Warrior received 3 damage. Health is now 97
