@@ -8,15 +8,23 @@ public class Archer extends Hero {
     }
 
     @Override
-    public void useUltimate(Hero target) {
-        if (ultimateUsed) {
-            System.out.println(getName() + " already used their ultimate!");
-            return;
-        }
+    public void useUltimate(Hero target, String choice) {
+        if (ultimateUsed) return;
         ultimateUsed = true;
-        System.out.println("🏹 " + getName() + " performs Triple Shot!");
-        for (int i = 0; i < 3; i++) {
-            attack(target);
+
+        switch (choice.trim().toLowerCase()) {
+            case "triple shot" -> {
+                int total = 0;
+                for (int i = 0; i < 3; i++) {
+                    int shot = 5 + (int)(Math.random() * 5);
+                    target.receiveDamage(shot);
+                    total += shot;
+                }
+            }
+            case "headshot" -> {
+                int dmg = 30 + (int)(Math.random() * 10);
+                target.receiveDamage(dmg);
+            }
         }
     }
 }

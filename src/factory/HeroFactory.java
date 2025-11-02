@@ -19,4 +19,5 @@ public class HeroFactory {
         AttackStrategy magicStrategy=new MagicAttack();
         return new Hero("Mage",60,7,magicStrategy);
     }
+
 }

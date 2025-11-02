@@ -26,9 +26,7 @@ public class DatabaseManager {
         try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
              PreparedStatement stmt = conn.prepareStatement(createTable)) {
             stmt.executeUpdate();
-            System.out.println("✅ PostgreSQL connected and table ready.");
         } catch (SQLException e) {
-            System.out.println("❌ Database initialization failed:");
             e.printStackTrace();
         }
     }
@@ -39,7 +37,6 @@ public class DatabaseManager {
         try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
              PreparedStatement stmt = conn.prepareStatement(insert)) {
 
-            System.out.println("⚙️ Connecting to DB to save battle...");
             stmt.setString(1, hero1);
             stmt.setString(2, hero2);
             stmt.setString(3, winner);
@@ -47,14 +44,9 @@ public class DatabaseManager {
             stmt.setInt(5, hero2Health);
 
             int rows = stmt.executeUpdate();
-            if (rows > 0) {
-                System.out.println("Battle saved to PostgreSQL successfully!");
-            } else {
-                System.out.println("No rows inserted — check SQL or connection.");
-            }
+
 
         } catch (SQLException e) {
-            System.out.println("Error saving battle:");
             e.printStackTrace();
         }
     }

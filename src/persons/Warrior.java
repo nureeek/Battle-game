@@ -8,13 +8,18 @@ public class Warrior extends Hero {
     }
 
     @Override
-    public void useUltimate(Hero target) {
-        if (ultimateUsed) {
-            System.out.println(getName() + " already used their ultimate!");
-            return;
-        }
+    public void useUltimate(Hero target, String choice) {
+        if (ultimateUsed) return;
         ultimateUsed = true;
-        System.out.println("💢 " + getName() + " activates Rage Mode! Strength doubled!");
-        this.strength *= 2;
+
+        switch (choice.trim().toLowerCase()) {
+            case "rage mode" -> {
+                this.strength *= 2;
+            }
+            case "ground slam" -> {
+                int dmg = 25 + (int)(Math.random() * 10);
+                target.receiveDamage(dmg);
+            }
+        }
     }
 }

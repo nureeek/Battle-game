@@ -9,7 +9,6 @@ public class AngerMode extends HeroDecorator{
     @Override
     public void attack(Hero target){
         int rageDamage=15;
-        System.out.println(getName()+ "enters Angry mode, Extra damage:" + rageDamage);
         super.attack(target);
     }
 }
