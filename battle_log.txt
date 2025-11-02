@@ -1,2 +1,4 @@
 Mage received 1 damage. Health is now 59
 Warrior received 3 damage. Health is now 97
+2025-11-03T00:21:46.525750400 — Warrior dealt 3 damage to Archer
+2025-11-03T00:21:47.127945600 — Archer dealt 3 damage to Warrior

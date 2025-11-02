@@ -9,6 +9,7 @@ import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import observer.LogObserver;
 import persons.Hero;
 import db.DatabaseManager;
 import strategy.*;
@@ -27,7 +28,6 @@ public class GameApp extends Application {
 
         Label title = new Label("Choose your heroes ");
         title.setStyle("-fx-font-size: 18px; -fx-font-weight: bold;");
-
         ChoiceBox<String> hero1Choice = new ChoiceBox<>();
         hero1Choice.getItems().addAll("Warrior", "Archer", "Mage");
         hero1Choice.setValue("Warrior");
@@ -46,6 +46,10 @@ public class GameApp extends Application {
         startBtn.setOnAction(e -> {
             hero1 = createHero(hero1Choice.getValue());
             hero2 = createHero(hero2Choice.getValue());
+
+            hero1.registerObserver(new LogObserver());
+            hero2.registerObserver(new LogObserver());
+
             startBattle(stage);
         });
     }
