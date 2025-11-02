@@ -40,6 +40,7 @@ public class Hero {
 
     }
 
+
     public void receiveDamage(int damage) {
         if(shielded){
             System.out.println(name+ "'s Arcane Shield blocks all damage!");
@@ -76,15 +77,15 @@ public class Hero {
 
             case "warrior" -> {
                 System.out.println("""
-                💢 Choose Warrior Ultimate:
-                1️⃣ Rage Mode (Double strength for next attacks)
-                2️⃣ Ground Slam (Heavy strike dealing instant damage)
-                """);
+                        Choose Warrior Ultimate:
+                        1️⃣ Rage Mode (Double strength for next attacks)
+                        2️⃣ Ground Slam (Heavy strike dealing instant damage)
+                        """);
 
-                Scanner scanner = new Scanner(System.in);
-                int choice = scanner.nextInt();
+               /* Scanner scanner = new Scanner(System.in);
+                int choice = scanner.nextInt();*/
 
-                if (choice == 1) {
+               /* if (choice == 1) {
                     System.out.println("💢 " + name + " enters Rage Mode! Strength doubled!");
                     this.strength *= 2;
                 } else if (choice == 2) {
@@ -95,19 +96,22 @@ public class Hero {
                     System.out.println("❌ Invalid choice, ultimate cancelled.");
                     ultimateUsed = false;
                 }
+            }*/
             }
+        }
 
             case "mage" -> {
                 System.out.println("""
-                ✨ Choose Mage Ultimate:
-                1️⃣ Fire Storm (Powerful area attack 🔥)
-                2️⃣ Arcane Shield (Block next attack 🧿)
-                """);
+                    ✨ Choose Mage Ultimate:
+                    1️⃣ Fire Storm (Powerful area attack 🔥)
+                    2️⃣ Arcane Shield (Block next attack 🧿)
+                    """);
+        }
 
-                Scanner scanner = new Scanner(System.in);
+               /* Scanner scanner = new Scanner(System.in);
                 int choice = scanner.nextInt();
-
-                if (choice == 1) {
+*/
+               /* if (choice == 1) {
                     System.out.println("🔥 " + name + " casts Fire Storm!");
                     int damage = 20 + (int)(Math.random() * 10);
                     target.receiveDamage(damage);
@@ -118,16 +122,16 @@ public class Hero {
                     System.out.println("❌ Invalid choice, ultimate cancelled.");
                     ultimateUsed = false;
                 }
-            }
+            }*/
 
             case "archer" -> {
                 System.out.println("""
-                🏹 Choose Archer Ultimate:
-                1️⃣ Triple Shot (Three rapid attacks)
-                2️⃣ Headshot (High chance critical hit)
-                """);
+                        🏹 Choose Archer Ultimate:
+                        1️⃣ Triple Shot (Three rapid attacks)
+                        2️⃣ Headshot (High chance critical hit)
+                        """);
 
-                Scanner scanner = new Scanner(System.in);
+                /*Scanner scanner = new Scanner(System.in);
                 int choice = scanner.nextInt();
 
                 if (choice == 1) {
@@ -144,6 +148,8 @@ public class Hero {
             }
 
             default -> System.out.println(name + " has no special ultimate ability.");
+        }
+    }*/
         }
     }
 
