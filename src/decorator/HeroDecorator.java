@@ -10,8 +10,8 @@ public abstract class HeroDecorator extends Hero {
         this.decoratedHero = decoratedHero;
     }
     @Override
-    public void attack(Hero target) {
-        decoratedHero.attack(target);
+    public int attack(Hero target) {
+        return decoratedHero.attack(target);
     }
     @Override
     public void receiveStrength(int strength) {

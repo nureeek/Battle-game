@@ -18,10 +18,14 @@ public class Mage extends Hero {
             case "fire storm" -> {
                 int dmg = 20 + (int)(Math.random() * 10);
                 target.receiveDamage(dmg);
+                notifyObservers(getName() + " casts Fire Storm for " + dmg + "!");
             }
             case "arcane shield" -> {
                 shieldActive = true;
+                notifyObservers(getName() + " activates Arcane Shield!");
             }
+            default -> notifyObservers(getName() + " tried to use unknown ultimate.");
+
         }
     }
 

@@ -10,5 +10,6 @@ public class DefenseBoost extends HeroDecorator {
     public void receiveDamage(int damage) {
         int reducedDamage=(int)(damage * 0.8);
         super.receiveDamage(reducedDamage);
+        notifyObservers(getName()+ " activated defense boost, damage reduced to : "+ reducedDamage);
     }
 }

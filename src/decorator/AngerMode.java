@@ -7,8 +7,12 @@ public class AngerMode extends HeroDecorator{
         super(decoratedHero.getName(), decoratedHero.getHealth(), decoratedHero.getStrength(), decoratedHero.getAttackStrategy(), decoratedHero);
     }
     @Override
-    public void attack(Hero target){
+    public int attack(Hero target){
+        int baseDamage=super.attack(target);
         int rageDamage=15;
-        super.attack(target);
+        int totalDamage=baseDamage+rageDamage;
+        target.receiveDamage(rageDamage);
+        notifyObservers(getName()+ " is Anger mode,extra damage: "+ rageDamage);
+        return totalDamage;
     }
 }

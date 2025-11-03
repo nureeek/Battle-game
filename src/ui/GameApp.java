@@ -83,7 +83,7 @@ public class GameApp extends Application {
         Button stats = new Button("Stats");
         Button newGame = new Button("New Game");
         Button exit = new Button("Exit");
-        HBox buttons = new HBox(10, attack, ultimate, defense, stats, newGame, exit);
+        HBox buttons = new HBox(10, attack, ultimate,strategy, defense, stats, newGame, exit);
 
         attack.setOnAction(e -> {
             attack(hero1, hero2);
@@ -105,18 +105,22 @@ public class GameApp extends Application {
         });
 
         strategy.setOnAction(e -> {
+            Hero selectedHero = chooseHero("Who is attack strategy do you want to change?");
+            if (selectedHero == null) return;
+
             ChoiceDialog<String> d = new ChoiceDialog<>("Melee", "Distance", "Magic");
             d.setTitle("Change Attack Strategy");
-            d.setHeaderText("Select new strategy for " + hero1.getName());
+            d.setHeaderText("Select new strategy for " + selectedHero.getName());
             d.showAndWait().ifPresent(c -> {
                 switch (c) {
-                    case "Melee" -> hero1.changeStrategy(new MeleeAttack());
-                    case "Distance" -> hero1.changeStrategy(new DistanceAttack());
-                    case "Magic" -> hero1.changeStrategy(new MagicAttack());
+                    case "Melee" -> selectedHero.changeStrategy(new MeleeAttack());
+                    case "Distance" -> selectedHero.changeStrategy(new DistanceAttack());
+                    case "Magic" -> selectedHero.changeStrategy(new MagicAttack());
                 }
-                log(hero1.getName() + " changed attack strategy to " + c);
+                log(selectedHero.getName() + " changed attack strategy to " + c);
             });
         });
+
 
         ultimate.setOnAction(e -> {
             Hero a = chooseHero("Who uses ultimate?");
@@ -159,8 +163,8 @@ public class GameApp extends Application {
     }
 
     private void attack(Hero a, Hero t) {
-        log(a.getName() + " attacked " + t.getName());
-        a.attack(t);
+        int damage=a.attack(t);
+        log(a.getName() + " attacked " + t.getName()+ " and dealt " + damage+ " damage");
         updateHP();
     }
 
@@ -207,22 +211,9 @@ public class GameApp extends Application {
     }
 
     private void applyUltimate(Hero a, Hero t, String c) {
-        switch (a.getName()) {
-            case "Warrior" -> {
-                if (c.equals("rage mode")) { a.receiveStrength(a.getStrength()); log(a.getName() + " enters Rage Mode!"); }
-                else if (c.equals("ground slam")) { int d = 25 + (int)(Math.random() * 10); t.receiveDamage(d); log(a.getName() + " uses Ground Slam for " + d); }
-            }
-            case "Mage" -> {
-                if (c.equals("fire storm")) { int d = 20 + (int)(Math.random() * 10); t.receiveDamage(d); log(a.getName() + " casts Fire Storm for " + d); }
-                else if (c.equals("arcane shield")) { a.activateShield(); log(a.getName() + " activates Arcane Shield!"); }
-            }
-            case "Archer" -> {
-                if (c.equals("triple shot")) { int total=0; for(int i=0;i<3;i++) total+=5+(int)(Math.random()*5); t.receiveDamage(total); log(a.getName()+" fires Triple Shot for "+total); }
-                else if (c.equals("headshot")) { int d=30+(int)(Math.random()*10); t.receiveDamage(d); log(a.getName()+" lands a Headshot for "+d); }
-            }
-        }
+        a.useUltimate(t, c);
+        log(a.getName() + " used " + c);
     }
-
     public static void main(String[] args) {
         launch();
     }

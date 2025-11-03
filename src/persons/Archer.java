@@ -19,11 +19,14 @@ public class Archer extends Hero {
                     int shot = 5 + (int)(Math.random() * 5);
                     target.receiveDamage(shot);
                     total += shot;
+                    notifyObservers(getName() + " fires Triple shot for " + total + "!");
+
                 }
             }
             case "headshot" -> {
                 int dmg = 30 + (int)(Math.random() * 10);
                 target.receiveDamage(dmg);
+                notifyObservers(getName() + " lands a Headshot for " + dmg + "!");
             }
         }
     }

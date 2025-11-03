@@ -15,10 +15,14 @@ public class Warrior extends Hero {
         switch (choice.trim().toLowerCase()) {
             case "rage mode" -> {
                 this.strength *= 2;
+                notifyObservers(getName() + " enters Rage Mode ");
+
             }
             case "ground slam" -> {
                 int dmg = 25 + (int)(Math.random() * 10);
                 target.receiveDamage(dmg);
+                notifyObservers(getName() + " uses Ground Slam for " + dmg + "!");
+
             }
         }
     }

@@ -2,7 +2,9 @@ package persons;
 
 import observer.HeroObserver;
 import strategy.AttackStrategy;
+import strategy.DistanceAttack;
 import strategy.MagicAttack;
+import strategy.MeleeAttack;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -95,12 +97,17 @@ public class Hero {
     public void useUltimate(Hero target, String choice) {}
 
 
-    public void attack(Hero target){
-        int baseDamage=(this.strength/5)+random.nextInt(6);
+    public int attack(Hero target){
+        int baseDamage=(int)((this.strength/5.0)+random.nextInt(6));
+        int finalDamage=baseDamage;
+        if (attackStrategy instanceof MeleeAttack melee) finalDamage = melee.modifyDamage(baseDamage);
+        else if (attackStrategy instanceof DistanceAttack dist) finalDamage = dist.modifyDamage(baseDamage);
+        else if (attackStrategy instanceof MagicAttack magic) finalDamage = magic.modifyDamage(baseDamage);
         attackStrategy.attack(name, target.name);
         target.receiveDamage(baseDamage);
 
         notifyObservers(name + " dealt " + baseDamage + " damage to " + target.getName());
+        return baseDamage;
 
     }
     public void registerObserver(HeroObserver observer){

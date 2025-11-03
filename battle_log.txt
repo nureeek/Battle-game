@@ -2,3 +2,61 @@ Mage received 1 damage. Health is now 59
 Warrior received 3 damage. Health is now 97
 2025-11-03T00:21:46.525750400 — Warrior dealt 3 damage to Archer
 2025-11-03T00:21:47.127945600 — Archer dealt 3 damage to Warrior
+2025-11-03T13:52:33.345495600 — Warrior dealt 2 damage to Archer
+2025-11-03T13:52:33.948335800 — Archer dealt 5 damage to Warrior
+2025-11-03T13:52:34.209658200 — Warrior dealt 5 damage to Archer
+2025-11-03T13:52:34.811664800 — Archer dealt 2 damage to Warrior
+2025-11-03T13:52:35.094121400 — Warrior dealt 3 damage to Archer
+2025-11-03T13:52:35.695343600 — Archer dealt 4 damage to Warrior
+2025-11-03T13:55:20.082206800 — Warrior changed attack stategy. 
+2025-11-03T13:57:15.924123300 — Archer changed attack stategy. 
+2025-11-03T13:57:18.477295200 — Warrior dealt 5 damage to Archer
+2025-11-03T13:57:19.078415100 — Archer dealt 1 damage to Warrior
+2025-11-03T13:57:40.623340900 — Archer changed attack stategy. 
+2025-11-03T13:57:41.506801200 — Warrior dealt 5 damage to Archer
+2025-11-03T13:57:42.107911400 — Archer dealt 5 damage to Warrior
+2025-11-03T14:14:30.453763300 — Warrior dealt 2 damage to Archer
+2025-11-03T14:14:31.055962900 — Archer dealt 5 damage to Warrior
+2025-11-03T14:14:31.059876200 — Warrior dealt 4 damage to Archer
+2025-11-03T14:14:31.662088 — Archer dealt 1 damage to Warrior
+2025-11-03T14:14:33.476683 — Warrior dealt 3 damage to Archer
+2025-11-03T14:14:34.078995100 — Archer dealt 4 damage to Warrior
+2025-11-03T14:14:36.413911100 — Warrior dealt 1 damage to Archer
+2025-11-03T14:14:37.015996600 — Archer dealt 4 damage to Warrior
+2025-11-03T14:14:37.253747 — Warrior dealt 2 damage to Archer
+2025-11-03T14:14:37.854827600 — Archer dealt 1 damage to Warrior
+2025-11-03T14:14:38.126760500 — Warrior dealt 1 damage to Archer
+2025-11-03T14:14:38.728075600 — Archer dealt 5 damage to Warrior
+2025-11-03T14:16:01.006299400 — Warrior dealt 2 damage to Archer
+2025-11-03T14:16:01.612463600 — Archer dealt 6 damage to Warrior
+2025-11-03T14:16:13.005759200 — Warrior changed attack stategy. 
+2025-11-03T14:16:14.981677300 — Warrior dealt 3 damage to Archer
+2025-11-03T14:16:15.583890500 — Archer dealt 6 damage to Warrior
+2025-11-03T14:16:18.141953 — Warrior dealt 2 damage to Archer
+2025-11-03T14:16:18.742994900 — Archer dealt 1 damage to Warrior
+2025-11-03T14:16:19.615274 — Warrior dealt 3 damage to Archer
+2025-11-03T14:16:20.216906800 — Archer dealt 3 damage to Warrior
+2025-11-03T14:16:21.941991400 — Warrior dealt 5 damage to Archer
+2025-11-03T14:16:22.543292800 — Archer dealt 3 damage to Warrior
+2025-11-03T14:16:22.935174800 — Warrior dealt 3 damage to Archer
+2025-11-03T14:16:23.536882 — Archer dealt 1 damage to Warrior
+2025-11-03T14:16:26.684502300 — Warrior dealt 1 damage to Archer
+2025-11-03T14:16:27.285787100 — Archer dealt 2 damage to Warrior
+2025-11-03T14:21:56.815436 — Warrior changed attack stategy. 
+2025-11-03T14:21:57.870562300 — Warrior dealt 1 damage to Archer
+2025-11-03T14:21:58.482818900 — Archer dealt 2 damage to Warrior
+2025-11-03T14:22:05.434727800 — Warrior changed attack stategy. 
+2025-11-03T14:22:06.855259200 — Warrior dealt 5 damage to Archer
+2025-11-03T14:22:07.458197 — Archer dealt 1 damage to Warrior
+2025-11-03T14:29:11.703124800 — Warrior dealt 1 damage to Archer
+2025-11-03T14:29:12.308454600 — Archer dealt 3 damage to Warrior
+2025-11-03T14:29:17.841283800 — Warrior dealt 0 damage to Archer
+2025-11-03T14:29:18.443496 — Archer dealt 4 damage to Warrior
+2025-11-03T14:34:18.430956 — Warrior dealt 0 damage to Archer
+2025-11-03T14:34:19.034605200 — Archer dealt 4 damage to Warrior
+2025-11-03T14:34:24.207607400 — Warrior dealt 0 damage to Archer
+2025-11-03T14:34:24.808689400 — Archer dealt 4 damage to Warrior
+2025-11-03T14:34:34.866266900 — Warrior dealt 4 damage to Archer
+2025-11-03T14:34:35.467188700 — Archer dealt 4 damage to Warrior
+2025-11-03T14:37:14.221227700 — Warrior dealt 4 damage to Archer
+2025-11-03T14:37:14.826245800 — Archer dealt 6 damage to Warrior
